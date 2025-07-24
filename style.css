@@ -1,24 +1,10 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #f8f8f8;
-    padding: 10px 20px;
-    border-bottom: 1px solid #ccc;
-}
-
 header .logo {
     font-size: 18px;
     font-weight: bold;
 }
 
 .menu-icon {
-    font-size: 24px;
+    font-size: 26px;
     cursor: pointer;
     display: none;
 }
@@ -33,7 +19,12 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #000000;
+}
+
+nav ul li b {
+    text-decoration: none;
+    color: #fd0000;
 }
 
 @media (max-width: 768px) {
@@ -62,4 +53,15 @@ main img {
     max-width: 100%;
     height: auto;
     margin: 20px auto;
+
+    text-decoration: none;
+    color: #ff0000;
 }
+
+main text {
+
+    font: bold;
+    font-size: larger;
+    color: #ff0000;
+}
+
