@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyvūnų prižiūrėtoja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="logo">Gyvūnų prižiūrėtoja</div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav>
+        <ul id="menu">
+            <li><a href="index.html">Pagrindinis</a></li>
+            <li><a href="registracija.html">Užsiregistruoti priežiūrai</a></li>
+            <li><a href="kontaktai.html">Kontaktai</a></li>
+            <li><a href="apie.html">Apie</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <img src="nuotrauka.jpg" alt="Gyvūnų prižiūrėtoja">
+</main>
+<script>
+function toggleMenu() {
+    document.getElementById('menu').classList.toggle('show');
+}
+</script>
+</body>
+</html>
