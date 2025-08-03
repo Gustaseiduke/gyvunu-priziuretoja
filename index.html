@@ -5,6 +5,61 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Gyvūnų priežiūra</title>
 <style>
+
+
+/* Hamburger default - paslėptas desktop */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Meniu responsyvus */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  nav.show {
+    display: flex;
+  }
+  
+  /* Hamburger matomas tik telefone */
+  .hamburger {
+    display: block;
+    margin-left: 15px;
+  }
+  
+  /* Mygtukas per vidurį */
+  .header-buttons {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    padding: 20px;
+  }
+}
+
+
+
+
+
+
+
+
 :root {
   --primary: #00c0a7;
   --dark: #333;
@@ -127,7 +182,6 @@ nav a:hover {
   flex-direction: column;
   gap: 25px; /* tarpai */
   max-width: 1450px;
-  max-height: 100px;
   margin: 0 auto;
 }
 .step {
@@ -220,19 +274,38 @@ footer {
 }
 </style>
 </head>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
+
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('show');
+});
+</script>
+
 <body>
 
 <header>
   <div class="logo" style="font-size:1.5em; font-weight:bold;">LOGO</div>
-  <nav>
+  
+  <!-- Navigacija -->
+  <nav id="nav-menu">
     <a href="#">Pradžia</a>
     <a href="#">Kaip tai veikia</a>
     <a href="#">Kontaktai</a>
   </nav>
+  
   <div class="header-buttons">
     <button class="button-pink">Užsakyti paslaugą</button>
   </div>
+  
+  <!-- Hamburger mygtukas -->
+  <div class="hamburger" id="hamburger">
+    ☰
+  </div>
 </header>
+
 
 <section class="hero" id="hero">
   <div class="hero-image">
