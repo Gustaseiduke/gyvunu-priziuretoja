@@ -26,6 +26,8 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 999;
+    transition: all 0.3s ease;
   }
   nav.show {
     display: flex;
@@ -40,7 +42,7 @@
   /* Mygtukas per vidurį */
   .header-buttons {
     position: absolute;
-    top: 80px;
+    top: 32px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -275,15 +277,6 @@ footer {
 </style>
 </head>
 
-<script>
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
-
-hamburger.addEventListener('click', () => {
-  navMenu.classList.toggle('show');
-});
-</script>
-
 <body>
 
 <header>
@@ -370,6 +363,14 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 });
 
 document.querySelectorAll('.step').forEach(el => observer.observe(el));
+
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
+
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('show');
+});
+
 </script>
 
 </body>
