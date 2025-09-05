@@ -14,7 +14,7 @@ hamburger.addEventListener('click', () => {
 document.addEventListener("DOMContentLoaded", function () {
   const slider = document.getElementById("heroSlider");
   let autoScroll = true;
-  let scrollAmount = slider.clientWidth;
+  //let scrollAmount = slider.clientWidth;
   let scrollTimer;
   let isAutoScrolling = false;
 
@@ -67,3 +67,4 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 });
 
 document.querySelectorAll('.step').forEach(el => observer.observe(el));
+
